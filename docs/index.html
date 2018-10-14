@@ -286,7 +286,7 @@ img.emoji {
         jQuery( document ).ready(function() {
             console.log('Remove-Duplicate-Lines');
             jQuery.ajax({
-                url: "/files/uses.json",
+                url: "/page/files/uses.json",
                 data: {action: 'text_mechanic_stats', tool: 'Remove-Duplicate-Lines', record: '0'},
                 method: 'POST'
             }).done(function(response) {
