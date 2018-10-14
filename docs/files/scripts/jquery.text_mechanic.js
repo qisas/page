@@ -1,11 +1,8 @@
 function execute_check(tool_name, callback_func) {
     jQuery.ajax({
-        url: "/",
-        data: {
-            action: 'text_mechanic_stats',
-            tool: tool_name
-        },
-        method: 'POST',
+        url: "https://cdn.staticaly.com/gh/qisas/page/a7cf97e6/docs/files/uses.json",
+        dataType: 'json',
+        type: 'GET',
         callback_function: callback_func,
         success: function(response) {
             var response = {"uses":1,"status":"OK"};
