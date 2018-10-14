@@ -1,6 +1,6 @@
 function execute_check(tool_name, callback_func) {
     jQuery.ajax({
-        url: "/wp-admin/admin-ajax.php",
+        url: "/",
         data: {
             action: 'text_mechanic_stats',
             tool: tool_name
@@ -8,6 +8,7 @@ function execute_check(tool_name, callback_func) {
         method: 'POST',
         callback_function: callback_func,
         success: function(response) {
+            var response = {"uses":1,"status":"OK"};
             console.log(response);
             jQuery('#uses').html('[<strong>Uses: </strong>' + response.uses + ']');
             if (response.status == 'ERROR') {
